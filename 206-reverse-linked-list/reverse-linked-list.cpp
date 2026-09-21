@@ -17,12 +17,12 @@ public:
         ListNode* next = nullptr;
 
         while (curr != nullptr) {
-            next = curr->next;   // Store next node
-            curr->next = prev;   // Reverse the link
-            prev = curr;         // Move prev forward
-            curr = next;         // Move curr forward
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;    
+            curr = next;  
         }
 
-        return prev;             // New head
+        return prev;
     }
 };
