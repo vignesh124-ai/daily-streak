@@ -9,12 +9,12 @@ public:
        for(int i=0;i<k;i++){
         sum=sum+nums[i];
        }
-       double max_avg=(double)sum/k;
-       double window_sum=sum;
+       int max_sum=sum;
+       int window_sum=sum;
        for(int j=k;j<n;j++){
         window_sum+=nums[j]-nums[j-k];
-        max_avg=max(max_avg,window_sum/k);
+        max_sum=max(max_sum,window_sum);
        }
-       return max_avg;
+       return (double)max_sum/k;
     }
 };
